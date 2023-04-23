@@ -1,0 +1,2 @@
+key=RSA.importKey(open('bruce_rsa.pub').read())
+print(key.n)
