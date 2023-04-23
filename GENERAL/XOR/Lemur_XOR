@@ -1,0 +1,13 @@
+import numpy as np
+from PIL import Image
+
+img1 = Image.open('lemur.png')
+img2 = Image.open('flag.png')
+
+n1 = np.array(img1)*255
+n2 = np.array(img2)*255
+
+# xor đe ra dc hinh anh 
+n_image = np.bitwise_xor(n1, n2).astype(np.uint8)
+
+Image.fromarray(n_image).save('n.png')
